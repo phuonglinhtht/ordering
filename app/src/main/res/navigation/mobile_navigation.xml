@@ -3,12 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/nav_home">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.ordering.UI.Admin.HomeFragment"
+        android:id="@+id/nav_home"
+        android:name="com.example.ordering.UI.HomeFragment"
         android:label="Home"
         tool:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.ordering.UI.CartFragment"
+        android:label="Cart"
+        tool:layout="@layout/fragment_cart" />
 
 </navigation>

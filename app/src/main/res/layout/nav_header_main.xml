@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ava_admin" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView6"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:paddingTop="8dp"
-        android:text="A D M I N"
+        android:text="S E P T E M B E R "
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/white"
         android:textSize="20sp"

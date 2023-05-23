@@ -37,20 +37,22 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = etName.getText().toString();
                 String password = etPassword.getText().toString();
-
+                Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
                 if(name.equals("admin") && password.equals("123456")) {
-                    Intent intent = new Intent(LoginActivity.this, MainAdminActivity.class);
+                    intent = new Intent(LoginActivity.this, MainAdminActivity.class);
                     startActivity(intent);
                     finish();
                 }
                 else if(name.equals("ban1") || name.equals("ban2") || name.equals("ban3") || name.equals("ban4") || name.equals("ban5") || name.equals("ban6") && password.equals("123456789")) {
-                    Intent intent = new Intent(LoginActivity.this, MainUserActivity.class);
+                    intent = new Intent(LoginActivity.this, MainUserActivity.class);
                     startActivity(intent);
                     finish();
                 }
                 else {
                     Toast.makeText(LoginActivity.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
                 }
+                intent.putExtra("id", name); // key là tên của thông tin cần chuyển, value là giá trị của thông tin
+                startActivity(intent);
             }
         });
     }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:content=".Admin.HomeFragment"
+    tools:content=".HomeFragment"
     android:background="@color/PaleGoldenrod">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,18 +12,21 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/editText"
             android:layout_width="292dp"
             android:layout_height="33dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/search_bg"
             android:drawableLeft="@drawable/baseline_search_24"
             android:drawablePadding="9dp"
-            android:padding="9dp"
-            android:textSize="13dp"
             android:hint="Search...."
+            android:padding="9dp"
             android:textColor="@color/PaleGoldenrod"
             android:textColorHint="@color/PaleGoldenrod"
-            android:layout_margin="10dp"
+            android:textSize="13dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.865"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

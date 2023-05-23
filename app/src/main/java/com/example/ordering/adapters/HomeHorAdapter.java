@@ -1,24 +1,21 @@
 package com.example.ordering.adapters;
 
 import android.app.Activity;
-import android.content.Context;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.annotation.NonNull;
 
 import com.example.homework7.R;
 import com.example.ordering.models.HomeHorModel;
 import com.example.ordering.models.HomeVerModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHolder>{
 
