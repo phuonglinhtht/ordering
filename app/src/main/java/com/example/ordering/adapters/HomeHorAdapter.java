@@ -46,12 +46,12 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
 
         if (check) {
             ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_1, "Trà sữa truyền thống", R.drawable.best_seller, "20.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_2, "Trà sữa matcha", R.drawable.transform, "25.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_3, "Trà sữa ô long kem trứng", R.drawable.best_seller, "30.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_4, "Trà sữa Thái Xanh", R.drawable.transform, "20.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_5, "Trà sữa Thái Đỏ", R.drawable.transform, "20.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6, "Trà sữa Trân Châu Đường Đen", R.drawable.transform, "35.000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_1,"Trà Sữa Truyền Thống",R.drawable.best_seller,"20.000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_2,"Trà Sữa Matcha",R.drawable.transform,"25.000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_3,"Trà Sữa Ô Long Kem Trứng",R.drawable.best_seller,"30.000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_4,"Trà Sữa Thái Xanh",R.drawable.transform,"20.000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_5,"Trà Sữa Thái Đỏ",R.drawable.transform,"20.000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6,"Trà Sữa Trân Châu Đường Đen",R.drawable.transform,"35.000"));
 
             updateVerticalRec.callBack(position, homeVerModels);
             check = false;
@@ -65,12 +65,12 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
 
                     if(position==0){
                         ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_1,"Trà sữa truyền thống",R.drawable.best_seller,"20.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_2,"Trà sữa matcha",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_3,"Trà sữa ô long kem trứng",R.drawable.best_seller,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_4,"Trà sữa Thái Xanh",R.drawable.transform,"20.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_5,"Trà sữa Thái Đỏ",R.drawable.transform,"20.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6,"Trà sữa Trân Châu Đường Đen",R.drawable.transform,"35.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_1,"Trà Sữa Truyền Thống",R.drawable.best_seller,"20.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_2,"Trà Sữa Matcha",R.drawable.transform,"25.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_3,"Trà Sữa Ô Long Kem Trứng",R.drawable.best_seller,"30.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_4,"Trà Sữa Thái Xanh",R.drawable.transform,"20.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_5,"Trà Sữa Thái Đỏ",R.drawable.transform,"20.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6,"Trà Sữa Trân Châu Đường Đen",R.drawable.transform,"35.000"));
 
                         updateVerticalRec.callBack(position,homeVerModels);
 
