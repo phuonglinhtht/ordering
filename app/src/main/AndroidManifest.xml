@@ -24,10 +24,10 @@
         android:theme="@style/Theme.Ordering"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name="com.example.ordering.MainAdminActivity">
-        </activity>
+        <activity android:name="com.example.ordering.MainAdminActivity"/>
         <activity android:name="com.example.ordering.MainUserActivity" />
         <activity android:name="com.example.ordering.activities.LoginActivity"/>
+        <activity android:name="com.example.ordering.activities.ItemActivity"/>
         <activity android:name="com.example.ordering.activities.IntroActivity"
             android:exported="true">
             <intent-filter>

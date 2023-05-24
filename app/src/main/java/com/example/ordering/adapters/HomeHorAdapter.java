@@ -1,6 +1,7 @@
 package com.example.ordering.adapters;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homework7.R;
+import com.example.ordering.activities.ItemActivity;
 import com.example.ordering.models.HomeHorModel;
 import com.example.ordering.models.HomeVerModel;
 
@@ -53,6 +55,7 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
 
             updateVerticalRec.callBack(position, homeVerModels);
             check = false;
+
         }
             holder.cardView.setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -70,6 +73,8 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
                         homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6,"Trà sữa Trân Châu Đường Đen",R.drawable.transform,"35.000"));
 
                         updateVerticalRec.callBack(position,homeVerModels);
+
+
                     } else if (position ==1){
                         ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
                         homeVerModels.add(new HomeVerModel(R.drawable.tea_1,"Trà Chanh Ổi",R.drawable.best_seller,"25.000"));
@@ -120,6 +125,8 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
 
                         updateVerticalRec.callBack(position,homeVerModels);
                     }
+
+
                 }
             });
             if (select){
@@ -134,6 +141,7 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
                 } else {
                     holder.cardView.setBackgroundResource(R.drawable.default_bg);           }
             }
+
         }
 
     @Override

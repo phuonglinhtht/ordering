@@ -1,6 +1,7 @@
 package com.example.ordering.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homework7.R;
+import com.example.ordering.activities.ItemActivity;
 import com.example.ordering.models.HomeVerModel;
 
 import java.util.ArrayList;
@@ -36,6 +38,17 @@ public class HomeVerAdapter extends RecyclerView.Adapter<HomeVerAdapter.ViewHold
         holder.name.setText(list.get(position).getName());
         holder.rating.setImageResource(list.get(position).getRating());
         holder.price.setText(list.get(position).getPrice());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ItemActivity.class);
+                intent.putExtra("ImageItem",list.get(position).getImage());
+                intent.putExtra("NameItem",list.get(position).getName());
+                intent.putExtra("PriceItem",list.get(position).getPrice());
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -53,5 +66,6 @@ public class HomeVerAdapter extends RecyclerView.Adapter<HomeVerAdapter.ViewHold
             price=itemView.findViewById(R.id.price);
             rating=itemView.findViewById(R.id.rating);
         }
+
     }
 }
