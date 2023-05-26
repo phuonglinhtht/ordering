@@ -15,9 +15,7 @@ import com.example.apporder.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainAdminActivity extends AppCompatActivity {
-    private AppBarConfiguration mAppBarConfiguration;
-
-    Toolbar toolbar;
+    private AppBarConfiguration mAppBarConfiguration1;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -27,10 +25,10 @@ public class MainAdminActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView=findViewById(R.id.nav_view);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home,R.id.nav_cart).setDrawerLayout(drawer).build();
-        NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this,navController,mAppBarConfiguration);
+        NavigationView navigationView=findViewById(R.id.nav_view_admin);
+        mAppBarConfiguration1 = new AppBarConfiguration.Builder(R.id.nav_home,R.id.nav_order).setDrawerLayout(drawer).build();
+        NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment_admin);
+        NavigationUI.setupActionBarWithNavController(this,navController,mAppBarConfiguration1);
         NavigationUI.setupWithNavController(navigationView,navController);
     }
 
@@ -38,9 +36,10 @@ public class MainAdminActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.activity_main_drawer,menu);
-    return true;
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_main_drawer_admin, menu);
+        return true;
     }
+
 
 }
