@@ -15,7 +15,7 @@ public class cart {
         if (instance == null) {
             instance = new cart();
         }
-        return instance;
+        return instance;//c
     }
 
     public void addProduct(CartModel list) {
