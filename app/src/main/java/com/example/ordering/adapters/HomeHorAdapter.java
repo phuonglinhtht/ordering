@@ -46,12 +46,12 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
 
         if (check) {
             ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_1,"Trà Sữa Truyền Thống",R.drawable.best_seller,"20.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_2,"Trà Sữa Matcha",R.drawable.transform,"25.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_3,"Trà Sữa Ô Long Kem Trứng",R.drawable.best_seller,"30.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_4,"Trà Sữa Thái Xanh",R.drawable.transform,"20.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_5,"Trà Sữa Thái Đỏ",R.drawable.transform,"20.000"));
-            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6,"Trà Sữa Trân Châu Đường Đen",R.drawable.transform,"35.000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_1,"Trà Sữa Truyền Thống",R.drawable.best_seller,"20000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_2,"Trà Sữa Matcha",R.drawable.transform,"25000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_3,"Trà Sữa Ô Long Kem Trứng",R.drawable.best_seller,"30000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_4,"Trà Sữa Thái Xanh",R.drawable.transform,"20000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_5,"Trà Sữa Thái Đỏ",R.drawable.transform,"20000"));
+            homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6,"Trà Sữa Trân Châu Đường Đen",R.drawable.transform,"35000"));
 
             updateVerticalRec.callBack(position, homeVerModels);
             check = false;
@@ -65,63 +65,63 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
 
                     if(position==0){
                         ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_1,"Trà Sữa Truyền Thống",R.drawable.best_seller,"20.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_2,"Trà Sữa Matcha",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_3,"Trà Sữa Ô Long Kem Trứng",R.drawable.best_seller,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_4,"Trà Sữa Thái Xanh",R.drawable.transform,"20.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_5,"Trà Sữa Thái Đỏ",R.drawable.transform,"20.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6,"Trà Sữa Trân Châu Đường Đen",R.drawable.transform,"35.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_1,"Trà Sữa Truyền Thống",R.drawable.best_seller,"20000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_2,"Trà Sữa Matcha",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_3,"Trà Sữa Ô Long Kem Trứng",R.drawable.best_seller,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_4,"Trà Sữa Thái Xanh",R.drawable.transform,"20000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_5,"Trà Sữa Thái Đỏ",R.drawable.transform,"20000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.bubble_tea_6,"Trà Sữa Trân Châu Đường Đen",R.drawable.transform,"35000"));
 
                         updateVerticalRec.callBack(position,homeVerModels);
 
 
                     } else if (position ==1){
                         ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_1,"Trà Chanh Ổi",R.drawable.best_seller,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_2,"Trà Xoài",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_3,"Trà Chanh Dây",R.drawable.best_seller,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_4,"Trà Bưởi",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_5,"Trà Đào",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_6,"Trà Dâu",R.drawable.transform,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_7,"Trà Vải",R.drawable.best_seller,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_8,"Trà Dưa Hấu",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_9,"Trà Thanh Long",R.drawable.best_seller,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.tea_10,"Trà Trái Cây Nhiệt Đới",R.drawable.transform,"30.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_1,"Trà Chanh Ổi",R.drawable.best_seller,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_2,"Trà Xoài",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_3,"Trà Chanh Dây",R.drawable.best_seller,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_4,"Trà Bưởi",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_5,"Trà Đào",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_6,"Trà Dâu",R.drawable.transform,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_7,"Trà Vải",R.drawable.best_seller,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_8,"Trà Dưa Hấu",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_9,"Trà Thanh Long",R.drawable.best_seller,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.tea_10,"Trà Trái Cây Nhiệt Đới",R.drawable.transform,"30000"));
 
                         updateVerticalRec.callBack(position,homeVerModels);
                     } else if (position ==2){
                         ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
-                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_1,"Cà Phê Đen Đá",R.drawable.best_seller,"20.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_2,"Cà Phê Sữa Đá",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_3,"Bạc Xĩu",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_4,"Coffee Jelly",R.drawable.transform,"35.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_5,"Frothy Whipped Coffee",R.drawable.transform,"40.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_6,"Cà Phê Trứng",R.drawable.best_seller,"30.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_1,"Cà Phê Đen Đá",R.drawable.best_seller,"20000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_2,"Cà Phê Sữa Đá",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_3,"Bạc Xĩu",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_4,"Coffee Jelly",R.drawable.transform,"35000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_5,"Frothy Whipped Coffee",R.drawable.transform,"40000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.coffee_6,"Cà Phê Trứng",R.drawable.best_seller,"30000"));
 
                         updateVerticalRec.callBack(position,homeVerModels);
                     } else if (position ==3){
                         ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_1,"Mango - Berry Smoothie",R.drawable.best_seller,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_2,"Kiwi Smoothie",R.drawable.transform,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_3,"Watermelon Smoothie",R.drawable.transform,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_4,"Mango - Banana Smoothie",R.drawable.transform,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_5,"Light Oreo Smoothie",R.drawable.transform,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_6,"Green Tea Matcha Smoothie",R.drawable.best_seller,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_7,"Avocado - Banana Smoothie",R.drawable.best_seller,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_8,"Rainbow Smoothie",R.drawable.best_seller,"40.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_9,"Creamy Peach Smoothie",R.drawable.transform,"35.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_1,"Mango - Berry Smoothie",R.drawable.best_seller,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_2,"Kiwi Smoothie",R.drawable.transform,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_3,"Watermelon Smoothie",R.drawable.transform,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_4,"Mango - Banana Smoothie",R.drawable.transform,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_5,"Light Oreo Smoothie",R.drawable.transform,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_6,"Green Tea Matcha Smoothie",R.drawable.best_seller,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_7,"Avocado - Banana Smoothie",R.drawable.best_seller,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_8,"Rainbow Smoothie",R.drawable.best_seller,"40000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.smoothie_9,"Creamy Peach Smoothie",R.drawable.transform,"35000"));
 
                         updateVerticalRec.callBack(position,homeVerModels);
                     } else if (position ==4){
                         ArrayList<HomeVerModel> homeVerModels = new ArrayList<>();
-                        homeVerModels.add(new HomeVerModel(R.drawable.cake_1,"Bánh Rán",R.drawable.best_seller,"10.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.cake_2,"French Opera Cake",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.cake_3,"Bánh Mì Bơ Tỏi",R.drawable.transform,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.cake_4,"Panna Cotta Xoài",R.drawable.transform,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.cake_5,"Bánh Sừng Trâu",R.drawable.transform,"30.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.cake_6,"Bánh Dâu",R.drawable.best_seller,"25.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.cake_7,"Bánh Flan",R.drawable.best_seller,"10.000"));
-                        homeVerModels.add(new HomeVerModel(R.drawable.cake_8,"Bánh Mì Hoa Cúc",R.drawable.best_seller,"30.000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.cake_1,"Bánh Rán",R.drawable.best_seller,"10000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.cake_2,"French Opera Cake",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.cake_3,"Bánh Mì Bơ Tỏi",R.drawable.transform,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.cake_4,"Panna Cotta Xoài",R.drawable.transform,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.cake_5,"Bánh Sừng Trâu",R.drawable.transform,"30000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.cake_6,"Bánh Dâu",R.drawable.best_seller,"25000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.cake_7,"Bánh Flan",R.drawable.best_seller,"10000"));
+                        homeVerModels.add(new HomeVerModel(R.drawable.cake_8,"Bánh Mì Hoa Cúc",R.drawable.best_seller,"30000"));
 
                         updateVerticalRec.callBack(position,homeVerModels);
                     }
