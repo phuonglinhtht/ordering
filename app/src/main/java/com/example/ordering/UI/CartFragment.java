@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -16,7 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.apporder.R;
 import com.example.ordering.adapters.CartAdapter;
 import com.example.ordering.models.CartModel;
+import com.example.ordering.models.OrderModel;
 import com.example.ordering.models.cart;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -26,6 +31,7 @@ public class CartFragment extends Fragment{
     private CartAdapter  cartAdapter;
     TextView total;
     ImageView load;
+    ConstraintLayout btnOrder;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,6 +66,29 @@ public class CartFragment extends Fragment{
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 CartFragment fragment = new CartFragment();
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+        btnOrder=view.findViewById(R.id.btnOrder);
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lists = cart.getInstance().getProducts();
+                String totalPrice = strNum;
+                OrderModel order = new OrderModel(lists,totalPrice,"Chưa thanh toán...");
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference ordersRef = database.getReference("orders");
+                String orderId = ordersRef.push().getKey(); // Tạo một key duy nhất cho đơn hàng
+                ordersRef.child(orderId).setValue(order);
+
+                lists.clear();
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                HomeFragment fragment = new HomeFragment();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();

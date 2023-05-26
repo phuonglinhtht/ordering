@@ -57,6 +57,7 @@
                     android:textStyle="bold"/>
             </LinearLayout>
             <TextView
+                android:id="@+id/order_stt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chưa thanh toán..."

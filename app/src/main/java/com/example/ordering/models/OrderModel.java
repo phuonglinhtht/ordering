@@ -2,15 +2,25 @@ package com.example.ordering.models;
 
 import java.util.List;
 
-public class Order {
+public class OrderModel {
     private List<CartModel> productList;
-    private int totalPrice;
+    private String totalPrice;
+    private String stt;
 
-    public Order() {}
+    public OrderModel() {}
 
-    public Order(List<CartModel> productList, int totalPrice) {
+    public OrderModel(List<CartModel> productList, String totalPrice, String stt) {
         this.productList = productList;
         this.totalPrice = totalPrice;
+        this.stt = stt;
+    }
+
+    public String getStt() {
+        return stt;
+    }
+
+    public void setStt(String stt) {
+        this.stt = stt;
     }
 
     public List<CartModel> getProductList() {
@@ -21,11 +31,11 @@ public class Order {
         this.productList = productList;
     }
 
-    public int getTotalPrice() {
+    public String getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(int totalPrice) {
+    public void setTotalPrice(String totalPrice) {
         this.totalPrice = totalPrice;
     }
 }

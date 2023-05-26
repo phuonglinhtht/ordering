@@ -4,6 +4,7 @@ package com.example.ordering.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,7 +21,7 @@ import java.util.List;
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
 
     private List<CartModel> lists;
-    public ConstraintLayout btnDel;
+
 
     @NonNull
     @Override
@@ -62,6 +63,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
         public EditText note;
         public TextView total;
         public ConstraintLayout btnDel;
+        public ConstraintLayout btnOrder;
 
         public ViewHolder(@NonNull View itemView){
             super(itemView);
@@ -72,6 +74,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
             total=itemView.findViewById(R.id.total);
             btnDel=itemView.findViewById(R.id.btnDel);
             load=imageView.findViewById(R.id.load);
+            btnOrder=itemView.findViewById(R.id.btnOrder);
         }
     }
 }
