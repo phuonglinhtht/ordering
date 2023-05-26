@@ -2,22 +2,29 @@ package com.example.ordering.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.apporder.R;
-import com.example.apporder.common.SharedPreference;
-import com.example.apporder.models.ItemModel;
+import com.example.ordering.models.CartModel;
+
+import java.util.List;
+
 
 public class ItemActivity extends AppCompatActivity {
+    public static List<CartModel> cart;
     TextView name;
     TextView price;
     TextView credit;
     ImageView item_img;
+    private ConstraintLayout btnAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +36,14 @@ public class ItemActivity extends AppCompatActivity {
         price=findViewById(R.id.price);
         credit=findViewById(R.id.credit);
         item_img=findViewById(R.id.item_img);
+
         Intent intent = getIntent();
         int imageItem = intent.getIntExtra("ImageItem", 0);
         String nameItem = intent.getStringExtra("NameItem");
         String priceItem = intent.getStringExtra("PriceItem");
         name.setText(nameItem); price.setText(priceItem);
         item_img.setImageResource(imageItem);
+
         if (nameItem.equals("Trà Sữa Trân Châu Đường Đen")) {String cre="Là sự kết hợp hoàn hảo giữa sữa tươi không đường và trân châu đường đen. Hương vị thanh mát, nhẹ nhàng của sữa tươi hòa quyện với trân châu dẻo dai, ngọt ngào đã tạo nên sức hấp dẫn không thể chối từ của loại đồ uống này..";credit.setText(cre);}
         else if (nameItem.equals("Trà Sữa Thái Đỏ")) {String cre="Trà Thái đỏ hay còn có tên gọi khác là trà sữa Thái đỏ, trà đá Thái Lan hoặc trà Thái, đây là loại thức uống phổ biến của người dân Thái Lan. Trà khi pha ra có nước mà hổ phách vô cùng đẹp mắt và có hương thơm nhẹ, rất thích hợp làm nguyên liệu để pha trà sữa.";credit.setText(cre);}
         else if (nameItem.equals("Trà Sữa Thái Xanh")) {String cre="Trà sữa thái xanh là một món uống đang được yêu thích nhất của giới trẻ hiện nay bởi hương thơm của trà thái thanh mát, kết hợp với các loại thạch rau câu dẻo. Trà thái có mùi thơm thanh dịu sự kết hợp của lá trà, bột trà hòa quyện trong đó là vị thơm của các loại hoa mộc có tác dụng giải nhiệt, bổ sung chất dinh dưỡng cho sức khỏe.";credit.setText(cre);}
@@ -75,6 +84,18 @@ public class ItemActivity extends AppCompatActivity {
         else if (nameItem.equals("Bánh Flan")) {String cre="Chất bánh mềm mịn, thơm mát và mang hương vị đặc trưng của caramel. Một món ăn được yêu thích như này mà cách làm lại vô cùng đơn giản.";credit.setText(cre);}
         else if (nameItem.equals("Bánh Mì Hoa Cúc")) {String cre="Bánh mì hoa cúc hay Brioche là một loại bánh mì có nguồn gốc từ Pháp. Với thành phần giàu bơ và trứng, bánh mì hoa cúc có một lớp vỏ mềm, ẩm và vàng sẫm. Khi nướng lên, bánh luôn có thớ mềm và xốp, hương vị vô cùng tuyệt vời.";credit.setText(cre);}
 
+        btnAdd=findViewById(R.id.buttonAdd);
+        btnAdd.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Tạo một đối tượng Item từ thông tin lấy được
+                CartModel item = new CartModel(imageItem, nameItem, priceItem,"");
+                com.example.ordering.models.cart.getInstance().addProduct(item);
+                Toast.makeText(ItemActivity.this,"Thêm vào giỏ hàng thành công",Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
+
 
 }

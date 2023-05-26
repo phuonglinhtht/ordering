@@ -11,7 +11,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.homework7.R;
+import com.example.apporder.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainAdminActivity extends AppCompatActivity {

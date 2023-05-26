@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.homework7.R;
+import com.example.apporder.R;
 import com.example.ordering.adapters.HomeHorAdapter;
 import com.example.ordering.adapters.HomeVerAdapter;
 import com.example.ordering.adapters.UpdateVerticalRec;

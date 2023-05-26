@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.homework7.R;
+import com.example.apporder.R;
 import com.example.ordering.activities.ItemActivity;
 import com.example.ordering.models.HomeVerModel;
 
