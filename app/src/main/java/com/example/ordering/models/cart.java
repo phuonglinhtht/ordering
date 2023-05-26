@@ -1,2 +1,3 @@
-package com.example.ordering.models;public class cart {
+package com.example.ordering.models;
+public class cart {
 }

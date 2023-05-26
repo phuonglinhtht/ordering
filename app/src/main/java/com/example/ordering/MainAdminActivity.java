@@ -16,10 +16,12 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainAdminActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
+
     Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
+
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_mainadmin);
         Toolbar toolbar = findViewById(R.id.toolbar);

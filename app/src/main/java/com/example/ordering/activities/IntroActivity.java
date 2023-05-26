@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.example.homework7.R;
+import com.example.apporder.R;
 
 
 public class IntroActivity extends AppCompatActivity {

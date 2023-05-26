@@ -1,13 +1,14 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
-    namespace 'com.example.homework7'
+    namespace 'com.example.apporder'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.homework7"
+        applicationId "com.example.apporder"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -29,6 +30,8 @@ android {
 }
 
 dependencies {
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+    implementation 'com.google.firebase:firebase-analytics'
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'

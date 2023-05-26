@@ -1,2 +1,3 @@
-package com.example.ordering.adapters;public class CartAdapter {
+package com.example.ordering.adapters;
+public class CartAdapter {
 }

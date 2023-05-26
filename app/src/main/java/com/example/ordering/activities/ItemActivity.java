@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.homework7.R;
-import com.example.ordering.common.SharedPreference;
-import com.example.ordering.models.ItemModel;
+import com.example.apporder.R;
+import com.example.apporder.common.SharedPreference;
+import com.example.apporder.models.ItemModel;
 
 public class ItemActivity extends AppCompatActivity {
     TextView name;

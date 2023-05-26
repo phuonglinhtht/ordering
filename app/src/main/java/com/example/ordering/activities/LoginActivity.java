@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.homework7.R;
+import com.example.apporder.R;
 import com.example.ordering.MainAdminActivity;
 import com.example.ordering.MainUserActivity;
 
