@@ -4,17 +4,14 @@ public class CartModel{
     private int image;
     private String name;
     private String price;
-    private String note;
 
-    public CartModel(int image, String name, String price, String note) {
+    public CartModel(int image, String name, String price) {
         this.image = image;
         this.name = name;
         this.price = price;
-        this.note = note;
     }
 
     public CartModel() {
-
     }
 
     public int getImage() {
@@ -39,13 +36,5 @@ public class CartModel{
 
     public void setPrice(String price) {
         this.price = price;
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
     }
 }

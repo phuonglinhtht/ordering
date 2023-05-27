@@ -89,7 +89,7 @@ public class ItemActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Tạo một đối tượng Item từ thông tin lấy được
-                CartModel item = new CartModel(imageItem, nameItem, priceItem,"");
+                CartModel item = new CartModel(imageItem, nameItem, priceItem);
                 com.example.ordering.models.cart.getInstance().addProduct(item);
                 Toast.makeText(ItemActivity.this,"Thêm vào giỏ hàng thành công",Toast.LENGTH_SHORT).show();
 

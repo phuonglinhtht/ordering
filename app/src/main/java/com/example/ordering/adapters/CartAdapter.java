@@ -36,7 +36,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
         holder.imageView.setImageResource(list.getImage());
         holder.name.setText(list.getName());
         holder.price.setText(list.getPrice());
-        holder.note.setText(list.getNote());
         holder.btnDel.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -60,7 +59,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
     public class ViewHolder extends RecyclerView.ViewHolder{
         public ImageView imageView,load;
         public TextView name,price;
-        public EditText note;
         public TextView total;
         public ConstraintLayout btnDel;
         public ConstraintLayout btnOrder;
@@ -70,7 +68,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>  {
             imageView=itemView.findViewById(R.id.detailed_img);
             name=itemView.findViewById(R.id.detailed_name);
             price=itemView.findViewById(R.id.detailed_price);
-            note=itemView.findViewById(R.id.detailed_note);
             total=itemView.findViewById(R.id.total);
             btnDel=itemView.findViewById(R.id.btnDel);
             load=imageView.findViewById(R.id.load);

@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="100dp"
     android:layout_marginBottom="5dp"
     android:background="@color/white"
     android:id="@+id/rec_cart">
@@ -12,9 +12,9 @@
         android:orientation="horizontal">
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/detailed_img"
-            android:layout_width="120dp"
-            android:layout_height="100dp"
-            android:layout_margin="5dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/bubble_tea_1"
             app:riv_corner_radius="14dp"/>
@@ -28,23 +28,12 @@
                 android:id="@+id/detailed_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:singleLine="true"
+                android:maxLines="2"
                 android:text="Tên"
                 android:textColor="@color/PaleGoldenrod"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
-            <EditText
-                android:id="@+id/detailed_note"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:singleLine="true"
-                android:textSize="16sp"
-                android:hint="Ghi chú"
-                android:textColor="@color/SaddleBrown"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">

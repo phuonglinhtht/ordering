@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "653156374200",
-    "firebase_url": "https://ordering-5f923-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "ordering-5f923",
-    "storage_bucket": "ordering-5f923.appspot.com"
+    "project_number": "821917947526",
+    "firebase_url": "https://apporder-bd719-default-rtdb.firebaseio.com",
+    "project_id": "apporder-bd719",
+    "storage_bucket": "apporder-bd719.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:653156374200:android:6154552c826eb1847b864d",
+        "mobilesdk_app_id": "1:821917947526:android:07c497d9cc4e7fbe6ca307",
         "android_client_info": {
           "package_name": "com.example.apporder"
         }
@@ -16,26 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAXnRtDFfwL46ZdQWtkkOaRFUJClnaqVkM"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:653156374200:android:0d51b3d8f8ed06fb7b864d",
-        "android_client_info": {
-          "package_name": "com.example.ordering"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAXnRtDFfwL46ZdQWtkkOaRFUJClnaqVkM"
+          "current_key": "AIzaSyBaAkIOewQW5ozrqZ2EaJAwtwFRVjzebIM"
         }
       ],
       "services": {
