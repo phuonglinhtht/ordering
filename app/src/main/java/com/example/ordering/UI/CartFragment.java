@@ -88,11 +88,11 @@ public class CartFragment extends Fragment{
                 String cart_note = note.getText().toString();
                 lists = cart.getInstance().getProducts();
                 String totalPrice = strNum;
-                OrderModel order = new OrderModel(lists,cart_note,totalPrice,"Chưa thanh toán...");
 
                 //đưa dữ liệu order lên firebase
                 DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference("orders");
                 String orderId = ordersRef.push().getKey(); // Tạo một key duy nhất cho đơn hàng
+                OrderModel order = new OrderModel(orderId,lists,cart_note,totalPrice,"Chưa thanh toán...");
                 ordersRef.child(orderId).setValue(order);
 
                 lists.clear();

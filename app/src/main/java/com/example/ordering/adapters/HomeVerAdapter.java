@@ -46,7 +46,6 @@ public class HomeVerAdapter extends RecyclerView.Adapter<HomeVerAdapter.ViewHold
                 intent.putExtra("NameItem",list.get(position).getName());
                 intent.putExtra("PriceItem",list.get(position).getPrice());
                 context.startActivity(intent);
-
             }
         });
     }

@@ -3,6 +3,7 @@ package com.example.ordering.models;
 import java.util.List;
 
 public class OrderModel {
+    private String id;
 
     private List<CartModel> productList;
     private String note;
@@ -11,12 +12,22 @@ public class OrderModel {
 
     public OrderModel(){}
 
-    public OrderModel( List<CartModel> productList, String note, String totalPrice, String stt) {
+    public OrderModel(String id, List<CartModel> productList, String note, String totalPrice, String stt) {
+        this.id = id;
         this.productList = productList;
         this.note = note;
         this.totalPrice = totalPrice;
         this.stt = stt;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public List<CartModel> getProductList() {
         return productList;
     }

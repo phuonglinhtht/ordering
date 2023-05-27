@@ -1,5 +1,6 @@
 package com.example.ordering.adapters;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.apporder.R;
-import com.example.ordering.models.CartModel;
+import com.example.ordering.activities.ItemActivity;
+import com.example.ordering.activities.OrderActivity;
 import com.example.ordering.models.OrderModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -40,6 +42,33 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
         holder.name.setText(order.getNote());
         holder.cost.setText(order.getTotalPrice());
         holder.stt.setText(order.getStt());
+        DatabaseReference orderRef = FirebaseDatabase.getInstance().getReference("orders");
+        orderRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List<OrderModel> newList = new ArrayList<>();
+                // Lấy dữ liệu từ DataSnapshot và thêm vào newList
+                for (DataSnapshot orderSnapshot : dataSnapshot.getChildren()) {
+                    OrderModel order = orderSnapshot.getValue(OrderModel.class);
+                    newList.add(order);
+                }
+                OrdersAdapter adapter = new OrdersAdapter(newList);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e("Firebase", "Lỗi: " + databaseError.getMessage());
+            }
+        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), OrderActivity.class);
+                intent.putExtra("order_id", order.getId()); // Chuyển id đơn hàng được chọn
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
