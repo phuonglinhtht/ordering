@@ -82,6 +82,7 @@ public class OrderActivity extends AppCompatActivity {
         btnPay.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                orderRef.child("stt").setValue("Đã thanh toán!");
                 Intent intent = new Intent(OrderActivity.this, BillActivity.class);
                 intent.putExtra("order_id", orderId); // Truyền thông tin đơn hàng
                 startActivity(intent);
