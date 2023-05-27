@@ -3,29 +3,27 @@ package com.example.ordering.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class cart {
-    private static cart instance;
-    private List<CartModel> lists;
+public class order {
+    private static order instance;
+    private List<OrderModel> lists;
 
-    private cart() {
+    private order() {
         lists = new ArrayList<>();
     }
-
-    public static cart getInstance() {
+    public static order getInstance() {
         if (instance == null) {
-            instance = new cart();
+            instance = new order();
         }
         return instance;
     }
-
-    public void addProduct(CartModel list) {
+    public void addOrder(OrderModel list) {
         lists.add(list);
     }
-    public void removeProduct(CartModel list) {
+    public void removeOrder(OrderModel list) {
         lists.remove(list);
     }
 
-    public List<CartModel> getProducts() {
+    public List<OrderModel> getOrder() {
         return lists;
     }
 

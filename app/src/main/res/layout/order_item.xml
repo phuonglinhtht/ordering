@@ -31,8 +31,8 @@
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="Tên bàn"
-                android:textColor="@color/PaleGoldenrod"
-                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <LinearLayout
@@ -47,7 +47,7 @@
                     android:textColor="@color/PaleGoldenrod"
                     android:textStyle="bold"
                     android:paddingRight="5dp"
-                    android:paddingLeft="120dp"/>
+                    android:paddingLeft="150dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

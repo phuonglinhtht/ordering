@@ -3,6 +3,7 @@ package com.example.ordering.models;
 import java.util.List;
 
 public class OrderModel {
+
     private List<CartModel> productList;
     private String note;
     private String totalPrice;
