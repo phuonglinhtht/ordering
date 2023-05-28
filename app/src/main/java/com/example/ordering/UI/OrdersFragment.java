@@ -25,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class OrdersFragment extends Fragment {
@@ -36,7 +37,7 @@ public class OrdersFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         DatabaseReference orderRef = FirebaseDatabase.getInstance().getReference("orders");
-        orderRef.addValueEventListener(new ValueEventListener() {
+        orderRef.orderByKey().limitToLast(50).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 List<OrderModel> newList = new ArrayList<>();
@@ -45,6 +46,7 @@ public class OrdersFragment extends Fragment {
                     OrderModel order = orderSnapshot.getValue(OrderModel.class);
                     newList.add(order);
                 }
+                Collections.reverse(newList); // đảo ngược thứ tự ở đây
                 OrdersAdapter adapter = new OrdersAdapter(newList);
                 orderRecyclerView.setAdapter(adapter);
             }
@@ -54,6 +56,7 @@ public class OrdersFragment extends Fragment {
                 Log.e("Firebase", "Lỗi: " + databaseError.getMessage());
             }
         });
+
 
     }
     @Override

@@ -3,6 +3,7 @@ package com.example.ordering.UI;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,10 +25,14 @@ import com.example.ordering.adapters.CartAdapter;
 import com.example.ordering.models.CartModel;
 import com.example.ordering.models.OrderModel;
 import com.example.ordering.models.cart;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
@@ -89,11 +94,26 @@ public class CartFragment extends Fragment{
                 lists = cart.getInstance().getProducts();
                 String totalPrice = strNum;
 
-                //đưa dữ liệu order lên firebase
                 DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference("orders");
                 String orderId = ordersRef.push().getKey(); // Tạo một key duy nhất cho đơn hàng
                 OrderModel order = new OrderModel(orderId,lists,cart_note,totalPrice,"Chưa thanh toán...");
                 ordersRef.child(orderId).setValue(order);
+
+                // Lấy ra đơn hàng mới nhất
+                Query latestOrderQuery = ordersRef.orderByKey().limitToLast(1);
+                latestOrderQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            OrderModel latestOrder = snapshot.getValue(OrderModel.class);
+                            // Sử dụng đơn hàng mới nhất ở đây
+                        }
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        Log.e("TAG", "onCancelled", databaseError.toException());
+                    }
+                });
 
                 lists.clear();
                 FragmentManager fragmentManager = getFragmentManager();

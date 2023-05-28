@@ -26,7 +26,7 @@ public class MainAdminActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView=findViewById(R.id.nav_view_admin);
-        mAppBarConfiguration1 = new AppBarConfiguration.Builder(R.id.nav_home,R.id.nav_order).setDrawerLayout(drawer).build();
+        mAppBarConfiguration1 = new AppBarConfiguration.Builder(R.id.nav_home,R.id.nav_cart,R.id.nav_order).setDrawerLayout(drawer).build();
         NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment_admin);
         NavigationUI.setupActionBarWithNavController(this,navController,mAppBarConfiguration1);
         NavigationUI.setupWithNavController(navigationView,navController);
