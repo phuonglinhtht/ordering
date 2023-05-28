@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.apporder.R;
+import com.example.ordering.activities.LoginActivity;
 import com.example.ordering.adapters.CartAdapter;
 import com.example.ordering.models.CartModel;
 import com.example.ordering.models.OrderModel;
@@ -99,22 +100,7 @@ public class CartFragment extends Fragment{
                 OrderModel order = new OrderModel(orderId,lists,cart_note,totalPrice,"Chưa thanh toán...");
                 ordersRef.child(orderId).setValue(order);
 
-                // Lấy ra đơn hàng mới nhất
-                Query latestOrderQuery = ordersRef.orderByKey().limitToLast(1);
-                latestOrderQuery.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            OrderModel latestOrder = snapshot.getValue(OrderModel.class);
-                            // Sử dụng đơn hàng mới nhất ở đây
-                        }
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        Log.e("TAG", "onCancelled", databaseError.toException());
-                    }
-                });
-
+                Toast.makeText(getContext(), "Đặt đơn thành công", Toast.LENGTH_SHORT).show();
                 lists.clear();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
