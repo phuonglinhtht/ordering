@@ -20,5 +20,10 @@
         android:name="com.example.ordering.UI.OrdersFragment"
         android:label="Orders"
         tool:layout="@layout/fragment_orders"/>
+    <fragment
+        android:id="@+id/nav_closed_bill"
+        android:name="com.example.ordering.UI.ClosedBillFragment"
+        android:label="Closed Bill"
+        tool:layout="@layout/fragment_closed_bill"/>
 
 </navigation>

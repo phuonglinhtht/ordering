@@ -30,6 +30,7 @@
         <activity android:name="com.example.ordering.activities.OrderActivity"/>
         <activity android:name="com.example.ordering.activities.ItemActivity"/>
         <activity android:name="com.example.ordering.activities.BillActivity"/>
+        <activity android:name="com.example.ordering.activities.Closed_billActivity"/>
         <activity android:name="com.example.ordering.activities.IntroActivity"
             android:exported="true">
             <intent-filter>

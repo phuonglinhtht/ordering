@@ -15,6 +15,10 @@
             android:id="@+id/nav_order"
             android:icon="@drawable/menu_order"
             android:title="Orders"/>
+        <item
+            android:id="@+id/nav_closed_bill"
+            android:icon="@drawable/bill"
+            android:title="Closed Bill"/>
     </group>
 
 </menu>
