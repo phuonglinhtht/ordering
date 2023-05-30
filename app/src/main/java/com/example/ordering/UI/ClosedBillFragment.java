@@ -45,8 +45,6 @@ public class ClosedBillFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_closed_bill, container, false);
         closed_bill_rec=view.findViewById(R.id.closed_bill_rec);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-        closed_bill_rec.setLayoutManager(layoutManager);
         closed_bill_rec.setAdapter(closedBillAdapter);
 
         DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference("closedBill");
@@ -55,11 +53,10 @@ public class ClosedBillFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot orderSnapshot : dataSnapshot.getChildren()) {
                     String itemName = orderSnapshot.getKey();
-                    Log.e("Firebase", "Lỗi: " + itemName);
                     ClosedBillModel n1=new ClosedBillModel(itemName);
-                    lists.add(n1);
-                    Log.e("Firebase", "Lỗi: " + lists);
-                    closedBillAdapter.notifyDataSetChanged();}
+                    lists.add(n1);}
+
+                closedBillAdapter.notifyDataSetChanged();
             }
 
             @Override

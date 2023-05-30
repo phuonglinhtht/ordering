@@ -5,16 +5,16 @@ import java.util.List;
 public class OrderModel {
     private String id;
 
-    private List<CartModel> productList;
+    private List<CartModel> itemList;
     private String note;
     private String totalPrice;
     private String stt;
 
     public OrderModel(){}
 
-    public OrderModel(String id, List<CartModel> productList, String note, String totalPrice, String stt) {
+    public OrderModel(String id, List<CartModel> itemList, String note, String totalPrice, String stt) {
         this.id = id;
-        this.productList = productList;
+        this.itemList = itemList;
         this.note = note;
         this.totalPrice = totalPrice;
         this.stt = stt;
@@ -29,11 +29,11 @@ public class OrderModel {
     }
 
     public List<CartModel> getProductList() {
-        return productList;
+        return itemList;
     }
 
     public void setProductList(List<CartModel> productList) {
-        this.productList = productList;
+        this.itemList = itemList;
     }
 
     public String getNote() {

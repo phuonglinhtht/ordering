@@ -116,6 +116,7 @@ public class OrdersFragment extends Fragment {
                         // Lưu trữ tổng số lượng của tất cả các đơn vào child này
                         summaryRef.child(orderId).child("totalQuantity").setValue(totalQuantity[0]);
                         summaryRef.child(orderId).child("totalRevenue").setValue(totalRevenue[0]);
+
                     }
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
